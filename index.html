@@ -1,111 +1,375 @@
-<html>
-<head>
- <meta name="viewport" content= "width=device-width" initial scale=1.0,user-scalable=no>
+body {
+  color: SLATEGRAY;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+h3 {
+    text-align: center;
 
-  <title>Jquery</title>
-  <link rel="stylesheet" href="index.css">
+    background-color: steelblue;
+    color: white;
+}
 
-</head>
-<body>
+#main-nav {
 
-<div class="topnav" id="myTopnav">
-  <a href="#logo" >Logo</a>
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+}
 
-    <a href="#link">Link</a>
-    <a href="#" class="disabled">Disabled</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-    </div> 
-      <div class="searchbar">
-    <form >
-    <input type="text" placeholder="Search..." />
-    <button type="submit" >Search</button>
-    </form>
-    </div>
-   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="responsivefunction()">&#9776;</a>
-   <a href="#"></a>
-    <a href="#" class="disabled"></a>
-</div>
+#main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+#navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
 
+#navbar-toggle:hover {
+  color: rgba(255, 255, 255, 1);
+}
 
-       <br>
-<h2 >Collapse component - accordion format</h2>
+.btn {
+  margin:auto;
+  display:block;
+  background-color: SteelBlue;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  
+  opacity: 0.6;
+  transition: 0.3s;
+}
 
- <div>
-  <ul id="accordion" class="container">
-	<li><div>About</div>
-			<ul>
-			<li > I am a Front-end Developer, graduate of Information Technology, based in India who loves creating great looking web products.I have 2 years commercial experience providing both front end and back end development, producing good quality responsive websites and  user experience.I will help you give your project the look and projection it deserves. 
-             </li>
-			<li>I believe in pretty designs and clean coding and in taking advantage of all the resources that Internet offers to make your visitors fall in love with your brand or product.I am highly-motivated, result oriented, self-driven, hard-working, fast learner and smart eager to be a part of the team, learn new technologies, become a valuable employee of the company and bring it success.
-			</li>
-		
-		</ul>
-	        </li>
+.btn:hover {opacity: 1}
 
-	<li><div>Portfolio</div>
-			<ul>
-			<li>Strong knowledge in HTML, CSS, JS, C, C++,  C#.Net, Java, Android<
-              Hands on experience in Windows XP, Vista, 7 , Win 2000, Win 2008</li>
-			<li>Proficient in applications like MS Office & Open Office</li>
-			<li>Profound experience in working with databases and Version Controls</li>
-		</ul>	
-	</li>
+.topnav {
+  font-size: 18px;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+   padding: 20px 20px;
+   margin-right: 10px;
+}
 
-
-	<li><div>Projects</div>
-			<ul>
-			<li>1.My Portfolio Website:
-                  This is my portfolio website that will showcase my works.Also I have build this as high-performance and responsive website that uses the power of html,css for enriching user experience.
-
-               </li>
-			<li>2.BiioHub social network 
-
-            Technologies: Android, Parse.com, Github.
-
-             Description: Here what we are doing is that we have a list of companies and products. We are fetching each company and product details from Parse db. Similarly each product and company news are also been fetched. We are also getting the updates of company and product from Facebook and LinkedIn. Users have the options for following and commenting. </li>
-         </li>
-			
-		</ul>
- </div>
-
-<h2>Modal Component</h2>
-
-  <!-- Trigger/Open The Modal -->
-  <button id="modalbtnId" class="btn">Open Modal</button>
-
-<!-- The Modal -->
-<div id="modalId" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Modal Title</h2>
-    </div>
-    <div class="modal-body">
-      <p>Woohoo, you're reading this text in a modal!</p>
-      
-      <button id="btncloseId"type="button" class="btnmodal">Close</button>&nbsp;&nbsp;&nbsp;&nbsp;
-   
-     <button id="btnsaveId"type="button" class="btnmodal">Save </button>
-   
-    </div>
-   
-  </div>
-
-</div>
-
+.topnav a {
  
- <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
- <script type="text/javascript" src="index.js"></script>
+  color: #f2f2f2;
+  text-align: center;
+  margin-right: 30px;
+  text-decoration: none;
+  font-size: 20px;
+}
 
-</body>
-</html>
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.dropdown {
+  
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: white;
+    
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.topnav .searchbar {
+ display: inline-block;
+ margin-right: 30px;
+}
+
+.topnav input{
+ 
+ padding: 6px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .searchbar button {
+  
+ 
+ 
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .searchbar button:hover {
+  background: SteelBlue;
+  color: white
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+
+  #main-nav {
+    display: flex !important;
+    margin-right: 30px;
+    flex-direction: row;
+ 
+  }
+
+  #main-nav li {
+    margin: 0;
+  }
+
+  #iconId
+  {
+    margin-top: 0;
+    
+    display: inline-block;
+  }
+
+  #logo {
+    margin-top: 0;
+  }
+
+  #navbar-toggle {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {position: relative;
+    display: inline-block;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+.topnav .responsive.searchbar {
+ display:inline-block;
+}
+
+
+.topnav .responsive.searchbar {
+  display:flex;
+   flex-basis: 100%;
+}
+
+.topnav .responsive.input{
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .searchbar button {
+  
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .searchbar button:hover {
+  background: SteelBlue;
+  color: white
+}
+}
+
+#accordion {
+    list-style: none;
+    padding: 0 0 0 0;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin: 5vw;
+}
+#accordion div {
+    display: block;
+    background-color: SteelBlue;
+    color: white;
+    font-weight: bold;
+    margin: 1px;
+    cursor: pointer;
+    padding: 5 5 5 7px;
+    list-style: circle;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border: 1px solid white;
+box-shadow: 0px 3px 20px 2px LIGHTBLUE;
+}
+#accordion ul {
+    list-style: none;
+    padding: 0 0 0 0;
+}
+#accordion ul{
+    display: none;
+}
+#accordion ul li {
+    font-weight: normal;
+    cursor: auto;
+    background-color: BISQUE;
+    padding: 0 0 0 7px;
+}
+#accordion a {
+    text-decoration: none;
+}
+#accordion a:hover {
+    text-decoration: underline;
+
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+     width: 50%; 
+ 
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    border: 1px solid steelblue;
+    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    padding: 2px 10px;
+    background-color: steelblue;
+    color: white;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: steelblue;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+
+.btnmodal {
+    
+  display:inline-block;
+  background-color: SteelBlue;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 16px;
+  
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.btnmodal:hover {opacity: 1}
+
+
+
+
+

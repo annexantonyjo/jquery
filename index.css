@@ -6,13 +6,11 @@ body {
 }
 h3 {
     text-align: center;
-
     background-color: steelblue;
     color: white;
 }
 
 #main-nav {
-
   list-style-type: none;
   display: none;
   flex-direction: column;
@@ -44,7 +42,6 @@ h3 {
   padding: 16px 32px;
   text-align: center;
   font-size: 16px;
-  
   opacity: 0.6;
   transition: 0.3s;
 }
@@ -75,7 +72,6 @@ h3 {
 }
 
 .dropdown {
-  
     overflow: hidden;
     margin-right: 30px;
 }
@@ -85,7 +81,6 @@ h3 {
     border: none;
     outline: none;
     color: white;
-    
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -101,7 +96,6 @@ h3 {
 }
 
 .dropdown-content a {
-    
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -129,16 +123,13 @@ h3 {
 }
 
 .topnav input{
- 
- padding: 6px;
+  padding: 6px;
   font-size: 17px;
   border: none;
 }
 
 .topnav .searchbar button {
-  
- 
- 
+  padding: 6px;
   background: #ddd;
   font-size: 17px;
   border: none;
@@ -149,39 +140,27 @@ h3 {
   background: SteelBlue;
   color: white
 }
-
-
-
 @media screen and (min-width: 768px) {
-
-
   #main-nav {
     display: flex !important;
     margin-right: 30px;
     flex-direction: row;
- 
-  }
-
+   }
   #main-nav li {
     margin: 0;
   }
-
   #iconId
   {
     margin-top: 0;
-    
     display: inline-block;
   }
-
   #logo {
     margin-top: 0;
   }
-
   #navbar-toggle {
     display: none;
   }
-  
-}
+ }
 
 @media screen and (max-width: 768px) {
   .topnav.responsive {position: relative;
@@ -192,7 +171,6 @@ h3 {
     top: 0;
   }
   .topnav.responsive a {
-    
     display: block;
     text-align: left;
   }
@@ -208,7 +186,6 @@ h3 {
  display:inline-block;
 }
 
-
 .topnav .responsive.searchbar {
   display:flex;
    flex-basis: 100%;
@@ -222,7 +199,6 @@ h3 {
 }
 
 .topnav .searchbar button {
-  
   padding: 6px 10px;
   margin-top: 8px;
   margin-right: 16px;
@@ -299,14 +275,12 @@ box-shadow: 0px 3px 20px 2px LIGHTBLUE;
 
 /* Modal Content */
 .modal-content {
-     width: 50%; 
- 
+    width: 50%; 
     position: relative;
     background-color: white;
     margin: auto;
     padding: 0;
     border: 1px solid steelblue;
-    
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -354,7 +328,6 @@ box-shadow: 0px 3px 20px 2px LIGHTBLUE;
 
 
 .btnmodal {
-    
   display:inline-block;
   background-color: SteelBlue;
   border: none;
@@ -362,7 +335,6 @@ box-shadow: 0px 3px 20px 2px LIGHTBLUE;
   padding: 10px 10px;
   text-align: center;
   font-size: 16px;
-  
   opacity: 0.6;
   transition: 0.3s;
 }

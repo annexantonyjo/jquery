@@ -1,39 +1,45 @@
 /*
 $( document ).ready(function() {
    // console.log( "ready!" );
-});
-*/
-function responsivefunction() {
-    var x = document.getElementById("myTopnav");
+   $("#iconId").click(function(){
+      
+
+ var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
+
         x.className += " responsive";
+      
+
+
     } else {
         x.className = "topnav";
+
     }
-}
-
-$("#iconId").click(function(){
-
-  document.getElementsByClassName("nav")[0].classList.toggle("responsive");
-
+ 
+ /* $( "div.searchbar" ).show();*/
+/*
 });
 
-/*
-function myFunction() {
-    document.getElementById("dropdownId").classList.toggle("show");
-  }
 
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-    var dropdown = document.getElementById("dropdownId");
-       dropdown.classList.add('show');
-       dropdown.classList.remove('hide');
-          event.preventDefault();
-    
-  }
+});*/
 
-   }
-*/
+$(document).ready(function() {
+     $("#iconId").click(function () {
+
+var x = document.getElementById("main-nav");
+  
+ if(this.classList.contains('active')){
+        x.style.display="none";
+        this.classList.remove('active');
+    }
+    else{
+        x.style.display="flex";
+        this.classList.add('active');
+
+    }
+  });
+  });
+
 // Accordian function
 
  $("#accordion > li > div").click(function(){
